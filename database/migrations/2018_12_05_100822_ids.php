@@ -15,7 +15,8 @@ class Ids extends Migration
     {
         Schema::create('arduino_ids', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('arduino_id');            
+            $table->string('arduino_id');     
+            $table->timestamps();       
         });
     }
 

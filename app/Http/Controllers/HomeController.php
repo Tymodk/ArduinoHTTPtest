@@ -20,6 +20,7 @@ class HomeController extends Controller
     }
     public function store(Request $request){
     	$arduino_id = new Arduino_id;
-    	$arduino_id->create($request);
+    	$arduino_id['arduino_id'] = $request['arduino_id'];
+        $arduino_id->save();
     }
 }
